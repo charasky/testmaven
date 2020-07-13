@@ -1,6 +1,9 @@
 pipeline {
   agent any
-  stages {
+    tools {
+        maven 'maven-tool'
+    } 
+stages {
     stage('Unit Test') {
       steps {
         sh 'mvn clean test'
