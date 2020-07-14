@@ -6,7 +6,7 @@ pipeline {
 stages {
     stage('Unit Test') {
       steps {
-        sh 'mvn clean test'
+        sh 'mvn -U clean install'
       }
     }
     stage('Deploy Standalone') {
